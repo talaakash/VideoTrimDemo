@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-VideoTrimDemo/Pods-VideoTrimDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/NextLevel/NextLevel.framework
+${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework
+${BUILT_PRODUCTS_DIR}/VideoTrimmerControl/VideoTrimmerControl.framework

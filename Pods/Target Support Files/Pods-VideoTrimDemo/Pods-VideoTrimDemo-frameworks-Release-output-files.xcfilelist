@@ -1,0 +1,3 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NextLevel.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VideoTrimmerControl.framework

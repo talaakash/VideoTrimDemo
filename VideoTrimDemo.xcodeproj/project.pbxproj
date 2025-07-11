@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CCCC2858725AAB9843B718F9 /* Pods_VideoTrimDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 648E32B28664CDC2F7DBB338 /* Pods_VideoTrimDemo.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		4DD0F79E0AC242BFAD9412F8 /* Pods-VideoTrimDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTrimDemo.release.xcconfig"; path = "Target Support Files/Pods-VideoTrimDemo/Pods-VideoTrimDemo.release.xcconfig"; sourceTree = "<group>"; };
+		648E32B28664CDC2F7DBB338 /* Pods_VideoTrimDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoTrimDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E6D2EA2E20EEED007B191E /* VideoTrimDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoTrimDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		923777D46AB194F24C395402 /* Pods-VideoTrimDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoTrimDemo.debug.xcconfig"; path = "Target Support Files/Pods-VideoTrimDemo/Pods-VideoTrimDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCCC2858725AAB9843B718F9 /* Pods_VideoTrimDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F192A237E03F45366F7D6CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				648E32B28664CDC2F7DBB338 /* Pods_VideoTrimDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A5BF9372B7265B7B7780ABE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				923777D46AB194F24C395402 /* Pods-VideoTrimDemo.debug.xcconfig */,
+				4DD0F79E0AC242BFAD9412F8 /* Pods-VideoTrimDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		84E6D2E12E20EEED007B191E = {
 			isa = PBXGroup;
 			children = (
 				84E6D2EC2E20EEED007B191E /* VideoTrimDemo */,
 				84E6D2EB2E20EEED007B191E /* Products */,
+				6A5BF9372B7265B7B7780ABE /* Pods */,
+				1F192A237E03F45366F7D6CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +92,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84E6D2FD2E20EEEF007B191E /* Build configuration list for PBXNativeTarget "VideoTrimDemo" */;
 			buildPhases = (
+				C8CFA2F185E8CEF8C6728F2A /* [CP] Check Pods Manifest.lock */,
 				84E6D2E62E20EEED007B191E /* Sources */,
 				84E6D2E72E20EEED007B191E /* Frameworks */,
 				84E6D2E82E20EEED007B191E /* Resources */,
@@ -77,8 +105,6 @@
 				84E6D2EC2E20EEED007B191E /* VideoTrimDemo */,
 			);
 			name = VideoTrimDemo;
-			packageProductDependencies = (
-			);
 			productName = VideoTrimDemo;
 			productReference = 84E6D2EA2E20EEED007B191E /* VideoTrimDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +153,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C8CFA2F185E8CEF8C6728F2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VideoTrimDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84E6D2E62E20EEED007B191E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +191,7 @@
 /* Begin XCBuildConfiguration section */
 		84E6D2FE2E20EEEF007B191E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 923777D46AB194F24C395402 /* Pods-VideoTrimDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -152,6 +204,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -167,6 +220,7 @@
 		};
 		84E6D2FF2E20EEEF007B191E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DD0F79E0AC242BFAD9412F8 /* Pods-VideoTrimDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -179,6 +233,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -229,7 +284,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -292,7 +347,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
