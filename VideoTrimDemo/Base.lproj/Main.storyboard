@@ -17,28 +17,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZr-3w-qb3">
-                                <rect key="frame" x="16" y="119" width="361" height="607"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2m-TU-tFF" customClass="VideoTrimmer" customModule="VideoTrimDemo" customModuleProvider="target">
-                                <rect key="frame" x="16" y="742" width="361" height="60"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="iPG-RR-bDQ"/>
-                                </constraints>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8F-Oa-aLo">
+                                <rect key="frame" x="319.66666666666669" y="118.99999999999999" width="57.333333333333314" height="34.333333333333329"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Trim">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="trimBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ADx-U2-2Mz"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yoE-5K-Vcf">
+                                <rect key="frame" x="16" y="161.33333333333331" width="361" height="640.66666666666674"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZr-3w-qb3">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="564.66666666666663"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2m-TU-tFF" customClass="VideoTrimmer" customModule="VideoTrimDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="580.66666666666663" width="361" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="iPG-RR-bDQ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BZr-3w-qb3" secondAttribute="trailing" constant="16" id="JVx-MQ-sBf"/>
-                            <constraint firstItem="o2m-TU-tFF" firstAttribute="top" secondItem="BZr-3w-qb3" secondAttribute="bottom" constant="16" id="MPz-1G-3xO"/>
-                            <constraint firstItem="BZr-3w-qb3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="NVU-wu-ICw"/>
-                            <constraint firstItem="BZr-3w-qb3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="egG-ib-cpJ"/>
-                            <constraint firstItem="o2m-TU-tFF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="u8q-wS-jH1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o2m-TU-tFF" secondAttribute="bottom" constant="16" id="vGf-S6-L2w"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o2m-TU-tFF" secondAttribute="trailing" constant="16" id="ywS-oH-r3l"/>
+                            <constraint firstItem="b8F-Oa-aLo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="2Z1-Iq-vhq"/>
+                            <constraint firstItem="b8F-Oa-aLo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="93w-gw-1EV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yoE-5K-Vcf" secondAttribute="bottom" constant="16" id="KD0-4R-K6E"/>
+                            <constraint firstItem="yoE-5K-Vcf" firstAttribute="top" secondItem="b8F-Oa-aLo" secondAttribute="bottom" constant="8" id="KXy-b8-jOn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b8F-Oa-aLo" secondAttribute="trailing" constant="16" id="PPR-3d-OtW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yoE-5K-Vcf" secondAttribute="trailing" constant="16" id="ftm-Rp-ztu"/>
+                            <constraint firstItem="yoE-5K-Vcf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="quP-8G-wMl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TKL-nm-pWu"/>

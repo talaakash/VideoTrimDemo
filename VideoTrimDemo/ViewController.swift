@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
     
     private func doInitSetup() {
-        guard let videoURL = Bundle.main.url(forResource: "Screen", withExtension: "mp4") else { return }
+        guard let videoURL = Bundle.main.url(forResource: "duration 2", withExtension: "mp4") else { return }
         let asset = AVAsset(url: videoURL)
         player = AVPlayer(url: URL(fileURLWithPath: videoURL.path))
         playerLayer = AVPlayerLayer(player: player)
@@ -50,9 +50,17 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         playerLayer.frame = playerView.bounds
     }
+}
+
+// MARK: - Action Methods
+extension ViewController {
+    @IBAction private func trimBtnTapped(_ sender: UIButton) {
+        self.exportTrimmedVideo(from: self.trimmerView)
+    }
     
     @objc private func trimmerValueChanged(_ sender: VideoTrimmer) {
-        
+        selectedTimeRange = sender.selectedRange
+        player.seek(to: selectedTimeRange.start, toleranceBefore: .zero, toleranceAfter: .zero)
     }
     
     @objc private func trimmerProgressChanged(_ sender: VideoTrimmer) {
@@ -60,21 +68,15 @@ class ViewController: UIViewController {
     }
 
     @objc private func trimmerBegan(_ sender: VideoTrimmer) {
-        
+        self.player.pause()
     }
 
     @objc private func trimmerEnded(_ sender: VideoTrimmer) {
-        print("User finished trimming")
-        selectedTimeRange = sender.selectedRange
-        self.player.pause()
-        player.seek(to: selectedTimeRange.start, toleranceBefore: .zero, toleranceAfter: .zero) { [weak self] _ in
-            self?.player.play()
-        }
+        self.player.play()
     }
-    
 }
 
-// MARK: - Private methods
+// MARK: - Private Methods
 extension ViewController {
     private func exportTrimmedVideo(from trimmer: VideoTrimmer) {
         guard let asset = trimmer.asset else { return }
